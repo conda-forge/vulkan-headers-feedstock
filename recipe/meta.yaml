@@ -10,7 +10,7 @@ package:
 # See https://github.com/KhronosGroup/Vulkan-Headers#version-tagging-scheme
 source:
   url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/sdk-{{ version }}.tar.gz
-  sha256: 6e16051ccb28821b907a08025eedb82cc73e1056924b32f75880ecae2499f7f6
+  sha256: 865fa8e8e8314fcca60777a92f50bd0cf612205a36e719d6975482d3366f619e
 
 build:
   number: 0
