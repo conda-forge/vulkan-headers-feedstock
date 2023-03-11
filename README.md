@@ -1,11 +1,11 @@
-About vulkan-headers
-====================
+About vulkan-headers-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vulkan-headers-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/KhronosGroup/Vulkan-Headers
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vulkan-headers-feedstock/blob/main/LICENSE.txt)
 
 Summary: Vulkan Header files and API registry.
 
@@ -34,10 +34,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17007&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/vulkan-headers-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17007&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/vulkan-headers-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17007&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/vulkan-headers-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17007&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/vulkan-headers-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -60,7 +81,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-vulkan--headers-green.svg)](https://anaconda.org/conda-forge/vulkan-headers) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/vulkan-headers.svg)](https://anaconda.org/conda-forge/vulkan-headers) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/vulkan-headers.svg)](https://anaconda.org/conda-forge/vulkan-headers) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/vulkan-headers.svg)](https://anaconda.org/conda-forge/vulkan-headers) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libvulkan--headers-green.svg)](https://anaconda.org/conda-forge/libvulkan-headers) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libvulkan-headers.svg)](https://anaconda.org/conda-forge/libvulkan-headers) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libvulkan-headers.svg)](https://anaconda.org/conda-forge/libvulkan-headers) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libvulkan-headers.svg)](https://anaconda.org/conda-forge/libvulkan-headers) |
 
 Installing vulkan-headers
 =========================
@@ -72,41 +93,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `vulkan-headers` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `libvulkan-headers` can be installed with `conda`:
 
 ```
-conda install vulkan-headers
-```
-
-or with `mamba`:
-
-```
-mamba install vulkan-headers
-```
-
-It is possible to list all of the versions of `vulkan-headers` available on your platform with `conda`:
-
-```
-conda search vulkan-headers --channel conda-forge
+conda install libvulkan-headers
 ```
 
 or with `mamba`:
 
 ```
-mamba search vulkan-headers --channel conda-forge
+mamba install libvulkan-headers
+```
+
+It is possible to list all of the versions of `libvulkan-headers` available on your platform with `conda`:
+
+```
+conda search libvulkan-headers --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search libvulkan-headers --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search vulkan-headers --channel conda-forge
+mamba repoquery search libvulkan-headers --channel conda-forge
 
-# List packages depending on `vulkan-headers`:
-mamba repoquery whoneeds vulkan-headers --channel conda-forge
+# List packages depending on `libvulkan-headers`:
+mamba repoquery whoneeds libvulkan-headers --channel conda-forge
 
-# List dependencies of `vulkan-headers`:
-mamba repoquery depends vulkan-headers --channel conda-forge
+# List dependencies of `libvulkan-headers`:
+mamba repoquery depends libvulkan-headers --channel conda-forge
 ```
 
 
