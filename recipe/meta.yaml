@@ -21,6 +21,7 @@ requirements:
     - ninja
     # This is just required to make sure that ${CMAKE_ARGS} is defined
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
 
 test:
   commands:
