@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 # For this repo, v**** tags exists, but apparently the stable tags (the one corresponding to versions
-# that are available for download at https://vulkan.lunarg.com/sdk/home) are the sdk-*** ones
+# that are available for download at https://vulkan.lunarg.com/sdk/home) are the vulkan-sdk-*** ones
 # See https://github.com/KhronosGroup/Vulkan-Headers#version-tagging-scheme
 source:
   url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-{{ version }}.tar.gz
