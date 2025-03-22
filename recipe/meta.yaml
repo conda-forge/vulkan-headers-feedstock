@@ -1,5 +1,5 @@
 {% set name = "libvulkan-headers" %}
-{% set version = "1.4.304.0" %}
+{% set version = "1.4.311.0" %}
 
 package:
   name: {{ name }}
