@@ -1,5 +1,5 @@
 {% set name = "libvulkan-headers" %}
-{% set version = "1.4.304.0" %}
+{% set version = "1.4.309.0" %}
 
 package:
   name: {{ name }}
@@ -10,7 +10,7 @@ package:
 # See https://github.com/KhronosGroup/Vulkan-Headers#version-tagging-scheme
 source:
   url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-{{ version }}.tar.gz
-  sha256: 46f8f5b6384a36c688e0c40d28d534df41d22de406493dfb5c9b7bcc29672613
+  sha256: 2bc1b4127950badc80212abf1edfa5c3b5032f3425edf37255863ba7592c1969
 
 build:
   number: 0
