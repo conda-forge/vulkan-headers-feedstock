@@ -1,15 +1,18 @@
-{% set name = "libvulkan-headers" %}
-{% set version = "1.4.309.0" %}
-
-package:
-  name: {{ name }}
-  version: {{ version }}
-
 # For this repo, v**** tags exists, but apparently the stable tags (the one corresponding to versions
 # that are available for download at https://vulkan.lunarg.com/sdk/home) are the vulkan-sdk-*** ones
 # See https://github.com/KhronosGroup/Vulkan-Headers#version-tagging-scheme
+schema_version: 1
+
+context:
+  name: libvulkan-headers
+  version: 1.4.309.0
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
 source:
-  url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-{{ version }}.tar.gz
+  url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-${{ version }}.tar.gz
   sha256: 2bc1b4127950badc80212abf1edfa5c3b5032f3425edf37255863ba7592c1969
 
 build:
@@ -20,21 +23,21 @@ requirements:
     - cmake
     - ninja
     # This is just required to make sure that ${CMAKE_ARGS} is defined
-    - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
 
-test:
-  commands:
-    - test -f ${PREFIX}/include/vulkan/vk_icd.h  # [not win]
-    - if not exist %PREFIX%\\Library\\include\\vulkan\\vk_icd.h exit 1  # [win]
+tests:
+  - package_contents:
+      include:
+        - vulkan/vk_icd.h
 
 about:
-  home: https://github.com/KhronosGroup/Vulkan-Headers
-  license: Apache-2.0 or MIT
+  license: Apache-2.0 OR MIT
   license_file:
     - LICENSES/Apache-2.0.txt
     - LICENSES/MIT.txt
   summary: Vulkan Header files and API registry.
+  homepage: https://github.com/KhronosGroup/Vulkan-Headers
 
 extra:
   feedstock-name: vulkan-headers
