@@ -42,4 +42,5 @@ about:
 extra:
   feedstock-name: vulkan-headers
   recipe-maintainers:
+    - JarrettSJohnson
     - traversaro
