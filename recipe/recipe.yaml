@@ -5,7 +5,7 @@ schema_version: 1
 
 context:
   name: libvulkan-headers
-  version: "1.4.335.0"
+  version: "1.4.341.0"
 
 package:
   name: ${{ name }}
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-${{ version }}.tar.gz
-  sha256: 269e95cc5138ea0a0d52fcb0ee19102add2560fedf5a43b1b5c17780c2775764
+  sha256: d73bc5036b6556b741f6985ff600ca720308c5f2850e4a43ceb498bd3de069e7
 
 build:
   number: 0
